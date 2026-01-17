@@ -1,0 +1,162 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "description": "Browser automation and testing"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+      "description": "Chrome DevTools integration"
+    },
+    "blender": {
+      "command": "uvx",
+      "args": ["blender-mcp"],
+      "description": "Blender 3D integration"
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--read-only"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "<YOUR_SUPABASE_TOKEN>"
+      },
+      "description": "Supabase database access"
+    },
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "NOTION_TOKEN": "<YOUR_NOTION_TOKEN>"
+      },
+      "description": "Notion workspace integration"
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "figma-mcp"],
+      "env": {
+        "FIGMA_API_KEY": "<YOUR_FIGMA_API_KEY>"
+      },
+      "description": "Figma design files access"
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_GITHUB_TOKEN>"
+      },
+      "description": "GitHub repositories and issues"
+    },
+    "gitlab": {
+      "command": "npx",
+      "args": ["-y", "@zereight/mcp-gitlab"],
+      "env": {
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "<YOUR_GITLAB_TOKEN>",
+        "GITLAB_API_URL": "https://gitlab.com/api/v4"
+      },
+      "description": "GitLab repositories and issues"
+    },
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "@tacticlaunch/mcp-linear"],
+      "env": {
+        "LINEAR_API_TOKEN": "<YOUR_LINEAR_TOKEN>"
+      },
+      "description": "Linear issue tracking"
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "<YOUR_SLACK_BOT_TOKEN>",
+        "SLACK_TEAM_ID": "<YOUR_SLACK_TEAM_ID>"
+      },
+      "description": "Slack messaging"
+    },
+    "firebase": {
+      "command": "npx",
+      "args": ["-y", "firebase-tools@latest", "experimental:mcp"],
+      "description": "Firebase services"
+    },
+    "stripe": {
+      "type": "http",
+      "url": "https://mcp.stripe.com",
+      "description": "Stripe payments API"
+    },
+    "context7": {
+      "transport": "sse",
+      "url": "https://mcp.context7.com/mcp",
+      "description": "Context7 documentation lookup"
+    },
+    "azure": {
+      "command": "npx",
+      "args": ["-y", "@azure/mcp@latest", "server", "start"],
+      "description": "Azure cloud services"
+    },
+    "atlassian": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-e", "CONFLUENCE_URL", "-e", "CONFLUENCE_USERNAME", "-e", "CONFLUENCE_API_TOKEN", "-e", "JIRA_URL", "-e", "JIRA_USERNAME", "-e", "JIRA_API_TOKEN", "ghcr.io/sooperset/mcp-atlassian:latest"],
+      "env": {
+        "CONFLUENCE_URL": "<YOUR_CONFLUENCE_URL>",
+        "CONFLUENCE_USERNAME": "<YOUR_CONFLUENCE_USERNAME>",
+        "CONFLUENCE_API_TOKEN": "<YOUR_CONFLUENCE_TOKEN>",
+        "JIRA_URL": "<YOUR_JIRA_URL>",
+        "JIRA_USERNAME": "<YOUR_JIRA_USERNAME>",
+        "JIRA_API_TOKEN": "<YOUR_JIRA_TOKEN>"
+      },
+      "description": "Jira and Confluence integration"
+    },
+    "grafana": {
+      "command": "docker",
+      "args": ["run", "--rm", "-i", "-e", "GRAFANA_URL", "-e", "GRAFANA_API_KEY", "mcp/grafana", "-t", "stdio"],
+      "env": {
+        "GRAFANA_URL": "<YOUR_GRAFANA_URL>",
+        "GRAFANA_API_KEY": "<YOUR_GRAFANA_API_KEY>"
+      },
+      "description": "Grafana dashboards and metrics"
+    },
+    "apple": {
+      "command": "bunx",
+      "args": ["@dhravya/apple-mcp@latest"],
+      "description": "Apple services (macOS only)"
+    },
+    "jetbrains": {
+      "command": "npx",
+      "args": ["-y", "@jetbrains/mcp-proxy"],
+      "description": "JetBrains IDE integration"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "Persistent memory storage"
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "<YOUR_FIRECRAWL_API_KEY>"
+      },
+      "description": "Web scraping and crawling"
+    },
+    "pipedream": {
+      "command": "npx",
+      "args": ["-y", "@pipedream/mcp"],
+      "env": {
+        "PIPEDREAM_CLIENT_ID": "<YOUR_PIPEDREAM_CLIENT_ID>",
+        "PIPEDREAM_CLIENT_SECRET": "<YOUR_PIPEDREAM_CLIENT_SECRET>",
+        "PIPEDREAM_PROJECT_ID": "<YOUR_PIPEDREAM_PROJECT_ID>"
+      },
+      "description": "Pipedream workflow automation"
+    },
+    "nx": {
+      "command": "npx",
+      "args": ["-y", "nx-mcp@latest"],
+      "description": "Nx monorepo tools"
+    },
+    "peekaboo": {
+      "command": "npx",
+      "args": ["-y", "@steipete/peekaboo-mcp"],
+      "description": "Screenshot and screen capture"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "mcp-generator",
+  "version": "1.0.0",
+  "description": "Interactive TUI to scan your system for MCP configs and generate .mcp.json files",
+  "type": "module",
+  "main": "cli.js",
+  "bin": {
+    "mcpmaker": "./cli.js",
+    "mcp-scan": "./scanner.js"
+  },
+  "scripts": {
+    "start": "node cli.js",
+    "scan": "node scanner.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "config",
+    "generator",
+    "cli",
+    "tui"
+  ],
+  "author": "vosamoilenko",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vosamoilenko/mcp-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vosamoilenko/mcp-generator/issues"
+  },
+  "homepage": "https://github.com/vosamoilenko/mcp-generator#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "chalk": "^5.6.2",
+    "glob": "^13.0.0",
+    "ora": "^9.0.0"
+  }
+}

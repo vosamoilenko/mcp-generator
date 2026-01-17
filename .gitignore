@@ -1,0 +1,5 @@
+node_modules/
+mcp-collection.json
+.mcp.json
+*.log
+.DS_Store
